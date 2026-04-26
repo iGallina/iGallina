@@ -76,19 +76,21 @@ Senior Product Owner | AI-powered products that cut costs 50% & saved $1M | CSPO
 
 ---
 
-## 📌 Pinned Highlights
+## 💼 Selected Work
 
-> Each pinned repo is a structured case study with problem, approach, metrics, and artifacts.
->
-> | Repo | What it shows |
-> |---|---|
-> | 🤖 **ai-automation-case-study** | $1M/year savings, 50% cost cut, 16h → 30min review time |
-> | 💳 **apple-pay-sicoob-integration** | Apple Pay + VISA + Mastercard rollout, payments domain expertise |
-> | 🏢 **outsystems-safe-backlog** | Enterprise SAFe backlog ownership with distributed teams |
-> | 🏛️ **cni-process-redesign** | 30% timeline reduction in government digital transformation |
-> | 🎓 **australian-edtech-startup** | Founded → exited; CTO + PO end-to-end ownership |
-> | 🧠 **prompt-engineering-playbook** | Reusable prompt templates, eval rubrics, AI PRD templates |
->
+Most of my professional work lives under NDA. Below is what I can share publicly.
+
+| Where | What I owned | Impact |
+|---|---|---|
+| **GRAN** | AI automation for review workflows | $1M+/year savings · 50% cost cut · 16h → 30min review time · 40% → 100% coverage |
+| **Sicoob** (FinTech) | Apple Pay, VISA & Mastercard integrations | Cross-team payments rollout |
+| **OutSystems** (Spain) | Product backlog under SAFe with distributed teams | Architect/dev/stakeholder alignment |
+| **CNI** (Brazilian industry confederation) | Backlog prioritization & process redesign | 30% timeline reduction |
+| **Ministério das Comunicações** | Government digital transformation | Public-sector product delivery |
+| **Australian EdTech startup** (founded → exited) | CTO + Product Owner | End-to-end ownership |
+
+For public code samples of my technical fluency, see the pinned repos above.
+
 ---
 
 ## 📈 GitHub Stats
