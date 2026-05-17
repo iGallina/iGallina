@@ -15,10 +15,15 @@ Resultado da busca pública (OSINT) feita em 2026-05-17 sobre:
 
 ### 1. ZoomInfo (data broker B2B) — EXPOSIÇÃO CONFIRMADA
 - URL: `https://www.zoominfo.com/p/Ian-Gallina/6216554018`
-- Expõe: nome, cargo ("AI & Automation Manager, Engineering"),
-  empregador (Gran Cursos Online), padrão de e-mail corporativo
-  (`****@grancursosonline.com.br`), telefone.
-- Risco: alto. Alimenta ferramentas de prospecção/spam e outros brokers.
+- Expõe um **dossiê profissional completo**, não só contato:
+  - Nome, cargo atual ("AI & Automation Manager, Engineering")
+  - Empregador atual (Gran Cursos Online) + padrão de e-mail corporativo
+    (`****@grancursosonline.com.br`) + telefone
+  - **Histórico de carreira:** Act (Product Manager), OutSystems, CNI,
+    DevSquad, AIS DIGITAL, Ministério das Comunicações
+  - **Formação:** Bacharelado pela UniCEUB (Centro Universitário de Brasília)
+- Risco: alto. É a fonte mais rica indexada; alimenta ferramentas de
+  prospecção/spam e re-popula outros brokers.
 - Ação: `templates/EN-zoominfo-optout.md` (privacy.zoominfo.com).
 
 ### 2. Vazamentos de credenciais (a confirmar via HIBP — Passo 6)
@@ -30,15 +35,24 @@ Resultado da busca pública (OSINT) feita em 2026-05-17 sobre:
 
 ## 🟠 Prioridade 2 — Verificar e remover
 
-### 3. Arquivo `.csv` em domínio governamental
+### 3. Arquivo `.csv` em domínio governamental (GovPilot / OPRA)
 - URL detectada: `https://main.govpilot.com/uuploads/EmailAttachments/6897/55b4f12c-e2023112417_Results_GV_1.csv`
-- Apareceu na busca por `ian.gallina@gmail.com`. Pode ser uma planilha de
-  registro público (GovPilot é plataforma de governo municipal nos EUA).
-- ⚠️ **Não abra e redistribua** — pode conter dados de terceiros. Apenas
+  (a mesma pasta `6897/` tem arquivos irmãos: `..._Results_RM_2.csv`)
+- Contexto identificado: GovPilot é software de governo municipal/condado
+  nos EUA. Esse caminho `EmailAttachments/.../Results_*.csv` são **exports
+  de pedidos OPRA** (Open Public Records Act, lei de transparência de
+  Nova Jersey/EUA). Seu Gmail apareceu indexado dentro de um desses CSVs.
+- Hipótese: seu e-mail entrou numa lista/anexo de um pedido de registro
+  público (ou foi raspado para dentro dele), e o município publicou o
+  resultado sem redação.
+- ⚠️ **Não abra e redistribua** — contém dados de terceiros. Apenas
   verifique se **o seu** e-mail está lá (Ctrl+F no seu próprio dado).
-- Ação se confirmado: pedir takedown ao GovPilot e ao órgão que publicou,
-  usando `templates/EN-data-broker-generic.md` (cite CCPA + remoção de
-  documento mal-publicado).
+- Ação se confirmado: pedir redação/takedown a **dois** alvos —
+  (a) o **Custodian of Records** do município (canal OPRA) e
+  (b) **GovPilot** (abuse/privacy, por hospedar o arquivo) — usando
+  `templates/EN-data-broker-generic.md` (cite CCPA + documento publicado
+  sem base legal + pedido de de-indexação no Google em paralelo,
+  `templates/PT-google-conteudo-desatualizado.md`).
 
 ### 4. Outros data brokers (não indexados, mas prováveis)
 - Para um profissional, os relevantes são B2B: RocketReach, Apollo.io,
@@ -49,9 +63,11 @@ Resultado da busca pública (OSINT) feita em 2026-05-17 sobre:
 
 ## 🟡 Prioridade 3 — Contas antigas
 
-- `redspell84@hotmail.com` / handle `redspell84`: sem hits públicos no
-  índice de busca, mas o handle sugere cadastros antigos em fóruns/jogos
-  (2014+). O risco real está nas bases de vazamento desses sites.
+- `redspell84@hotmail.com` / handle `redspell84`: verificado também em
+  Reddit, Steam, Twitch, GitHub e fóruns — **zero footprint público**.
+  Bom sinal: o único vetor de risco real é base de vazamento (Passo 6).
+- Detalhe de privacidade: o sufixo "84" pode permitir inferência de ano de
+  nascimento — evite reusar esse handle em cadastros novos.
 - Ação: `03-account-deletion-guide.md` + cruzar com resultado do HIBP.
 
 ## 🟢 Prioridade 4 — Perfis próprios (NÃO apagar)
