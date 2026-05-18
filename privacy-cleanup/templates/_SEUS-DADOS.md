@@ -1,35 +1,41 @@
-# Seus dados — preencha antes de enviar qualquer template
+# Seus dados — NÃO preencha dados reais aqui
 
-Substitua os placeholders `[...]` nos templates pelos valores abaixo.
-Mantenha este arquivo **fora de commits públicos** se preencher dados
-sensíveis (CPF, endereço, telefone) — veja a nota no fim.
+> 🛑 **Este arquivo é versionado e vai para um PR público. NÃO coloque
+> CPF, endereço, telefone ou nome completo real aqui.** Esta é a versão
+> de modelo, intencionalmente só com placeholders.
+
+## Como usar (fluxo seguro)
+
+1. Copie este arquivo para `_SEUS-DADOS.local.md` (mesma pasta).
+2. O `.gitignore` já bloqueia `_SEUS-DADOS.local.md` e `*.local.md` — esse
+   arquivo **nunca** é versionado nem enviado.
+3. Preencha seus dados reais **apenas** no `.local.md`.
+4. Ao montar um template, copie os valores do `.local.md` na hora de
+   enviar. Não cole dado real em nenhum arquivo rastreado.
+
+```sh
+cp privacy-cleanup/templates/_SEUS-DADOS.md \
+   privacy-cleanup/templates/_SEUS-DADOS.local.md
+git check-ignore privacy-cleanup/templates/_SEUS-DADOS.local.md  # deve listar o caminho
+```
+
+## Estrutura (só placeholders — preencha no `.local.md`)
 
 | Campo | Valor | Status |
 |---|---|---|
-| Nome completo legal | `Ian Gallina` (confirme se há nome do meio/sobrenome composto) | ⚠️ confirmar |
-| E-mail principal | `ian.gallina@gmail.com` | ✅ |
-| E-mail secundário/antigo | `redspell84@hotmail.com` | ✅ |
-| Cidade/UF/País | `Brasília, DF, Brasil` | ✅ |
-| Endereço postal completo | `[RUA, NÚMERO, COMPLEMENTO, CEP]` | ⚠️ preencher |
-| Telefone | `[+55 ...]` | ⚠️ preencher |
-| CPF (opcional, só p/ LGPD se exigido p/ verificação) | `[opcional]` | ⚠️ opcional |
-| LinkedIn | `https://www.linkedin.com/in/ian-gallina` | ✅ |
-| Identificador específico do broker | (ex.: URL do perfil ZoomInfo) | por caso |
+| Nome completo legal | `[NOME COMPLETO]` | preencher no .local |
+| E-mail principal | `ian.gallina@gmail.com` | público (ok) |
+| E-mail secundário/antigo | `redspell84@hotmail.com` | público (ok) |
+| Cidade/UF/País | `Brasília, DF, Brasil` | público (ok) |
+| Endereço postal completo | `[NÃO AQUI — só no .local]` | sensível |
+| Telefone | `[NÃO AQUI — só no .local]` | sensível |
+| CPF | `[NÃO AQUI — só no .local]` | **sensível** |
+| LinkedIn | `https://www.linkedin.com/in/ian-gallina` | público (ok) |
+| Identificador do broker | (ex.: URL do perfil ZoomInfo) | por caso |
 
-## Regras de preenchimento
+## Princípio da minimização
 
-- **Verificação de identidade:** os templates pedem confirmação de
-  identidade. Forneça **o mínimo necessário** (e-mail + nome). Só envie
-  documento se a empresa exigir e por canal seguro — nunca anexe RG/CPF a
-  e-mail aberto sem necessidade.
-- **Não invente dados.** Se um campo não se aplica ao broker, remova a linha.
-- **Um pedido por destinatário.** Personalize o `[NOME DA EMPRESA]` e o
-  identificador (URL do seu perfil naquele broker) em cada envio.
-- **Guarde prova:** salve cópia do e-mail enviado + qualquer resposta.
-  Prazos legais (15 dias LGPD simplificado / 1 mês GDPR / 45 dias CCPA)
-  contam a partir do envio comprovado.
-
-> ⚠️ **Privacidade deste arquivo:** este repositório pode virar PR público.
-> Não faça commit do endereço/telefone/CPF reais aqui. Preencha localmente
-> só na hora de enviar, ou mantenha os valores reais fora do git
-> (ex.: arquivo `_SEUS-DADOS.local.md` adicionado ao `.gitignore`).
+Na maioria dos pedidos LGPD/GDPR/CCPA, **e-mail + nome bastam** para
+identificação. Só inclua CPF/endereço se a empresa exigir explicitamente
+para verificação, e por canal seguro. Nunca anexe documento a e-mail aberto
+sem necessidade.
