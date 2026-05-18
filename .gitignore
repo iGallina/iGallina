@@ -1,0 +1,4 @@
+# Dados pessoais reais — NUNCA versionar/enviar.
+# O arquivo de dados reais vive só localmente, fora do git.
+privacy-cleanup/templates/_SEUS-DADOS.local.md
+*.local.md
